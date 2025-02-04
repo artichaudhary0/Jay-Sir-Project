@@ -1,0 +1,51 @@
+@font-face {  
+        font-display: swap;  
+        font-style: normal;  
+        src: url("/public/fonts/PoppinsBold.ttf");  
+        font-family: "Poppins";  
+        font-weight: 700;  
+}  
+@font-face {  
+        font-display: swap;  
+        font-style: normal;  
+        src: url("/public/fonts/PoppinsMedium.ttf");  
+        font-family: "Poppins";  
+        font-weight: 500;  
+}  
+
+@font-face {  
+        font-display: swap;  
+        font-style: normal;  
+        src: url("/public/fonts/PoppinsSemiBold.ttf");  
+        font-family: "Poppins";  
+        font-weight: 600;  
+}  
+@font-face {  
+    font-display: swap;  
+    font-style: normal;  
+    src: url("/public/fonts/PollerOneRegular.ttf");  
+    font-family: "Poller One";  
+    font-weight: 400;  
+}  
+@font-face {  
+    font-display: swap;  
+    font-style: normal;  
+    src: url("/public/fonts/SacramentoRegular.ttf");  
+    font-family: "Sacramento";  
+    font-weight: 400;  
+}  
+@font-face {  
+    font-display: swap;  
+    font-style: normal;  
+    src: url("/public/fonts/PoppinsRegular.ttf");  
+    font-family: "Poppins";  
+    font-weight: 400;  
+}  
+
+@font-face {  
+    font-display: swap;  
+    font-style: normal;  
+    src: url("/public/fonts/RobotoRomanMedium.ttf");  
+    font-family: "Roboto";  
+    font-weight: 500;  
+}
