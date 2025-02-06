@@ -19,7 +19,7 @@ export default function LandingPage() {
         />
       </Helmet>
       <div className="w-full bg-white-a700">
-        <div className="h-[654px] bg-[url(/public/images/img_group_48097137.png)] bg-cover bg-no-repeat px-6 py-8 md:h-auto sm:p-5">
+        <div className="bg-no-repeat px-2 py-8 md:h-auto sm:p-0">
           <Header />
         </div>
         {/* landing page main section */}

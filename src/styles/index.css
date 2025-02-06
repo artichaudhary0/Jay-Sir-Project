@@ -11,8 +11,8 @@ body {
     box-sizing: border-box;
     line-height: normal;
     font-family: inherit;
-    margin: unset;
-    padding: unset;
+    margin: 0;
+    padding: 0;
 }
 
 /* Links reset */
@@ -28,6 +28,12 @@ ul {
     list-style: none;
 }
 
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Prevents inline space issues */
+}
 
 /* Responsively scale text sizes */
 h1, h2, h3, h4, h5, h6 {
@@ -35,16 +41,43 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 
+/* Main container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Prevent flexbox overflow */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 0; /* Prevent overflow */
+}
+
+/* Ensure all elements respect max width */
+.full-width {
+    width: 100vw;
+    max-width: 100%;
+}
+
 /* Media Queries for responsiveness */
 @media (max-width: 1024px) {
     body {
         font-size: 16px; /* Adjust font size on smaller screens */
     }
+
     .header {
         flex-direction: column; /* Stack elements for smaller screens */
     }
+
     .navigation {
         display: block; /* Stack menu items */
+    }
+
+    .container {
+        padding: 10px;
     }
 }
 
@@ -53,7 +86,6 @@ h1, h2, h3, h4, h5, h6 {
         padding: 20px; /* Add padding to header for smaller screens */
     }
 
-    /* Adjust padding and layout for smaller screens */
     .navbar {
         flex-direction: column;
         padding: 10px 0;
@@ -63,9 +95,14 @@ h1, h2, h3, h4, h5, h6 {
         padding: 12px 0;
         text-align: center;
     }
+
+    /* Prevent large elements from causing horizontal scrolling */
+    .full-width {
+        width: 100%;
+    }
 }
 
-/* For Alice carousel dots (Make them responsive) */
+/* Alice Carousel Dots - Make them responsive */
 .alice-carousel_dots-item {
     cursor: pointer;
     margin: 0 5px;
@@ -77,17 +114,12 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.2);
 }
 
-/* Prevent body overflow with proper scroll management */
+/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Handling responsive images and containers */
-.container {
-    width: 100%;
-    padding: 15px;
-}
-
+/* Ensure containers do not overflow */
 @media (max-width: 600px) {
     .container {
         padding: 10px;
