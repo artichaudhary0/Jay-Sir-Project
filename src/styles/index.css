@@ -27,3 +27,69 @@ ul {
     padding: 0;
     list-style: none;
 }
+
+
+/* Responsively scale text sizes */
+h1, h2, h3, h4, h5, h6 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    line-height: 1.2;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    body {
+        font-size: 16px; /* Adjust font size on smaller screens */
+    }
+    .header {
+        flex-direction: column; /* Stack elements for smaller screens */
+    }
+    .navigation {
+        display: block; /* Stack menu items */
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px; /* Add padding to header for smaller screens */
+    }
+
+    /* Adjust padding and layout for smaller screens */
+    .navbar {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .menu-item {
+        padding: 12px 0;
+        text-align: center;
+    }
+}
+
+/* For Alice carousel dots (Make them responsive) */
+.alice-carousel_dots-item {
+    cursor: pointer;
+    margin: 0 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on carousel dots */
+.alice-carousel_dots-item:hover {
+    transform: scale(1.2);
+}
+
+/* Prevent body overflow with proper scroll management */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Handling responsive images and containers */
+.container {
+    width: 100%;
+    padding: 15px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+}
