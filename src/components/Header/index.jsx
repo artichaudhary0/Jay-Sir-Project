@@ -39,7 +39,7 @@ const Header = () => {
       <div
         className={`absolute top-[72px] left-0 w-full h-[270px] bg-cover bg-center brightness-75 ${
           !isMenuOpen
-            ? "md:top-0 md:h-full md:bg-[url('images/head.png')] bg-[url('images/head.png')]"
+            ? "md:top-0 md:h-full md:bg-[url('/images/head.png')] bg-[url('/images/head.png')]"
             : ""
         } mx-[20px] my-[20px] md:m-0 rounded-[32px] md:rounded-none`}
       >
