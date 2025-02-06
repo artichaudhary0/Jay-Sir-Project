@@ -11,7 +11,7 @@ export default function LandingPageMainSection() {
         {/* Mobile Name and Designation Section (visible only on mobile) */}
         <div className="flex lg:hidden flex-col items-center text-center">
           <Heading 
-            className="text-4xl sm:text-5xl font-extrabold text-black" 
+            className="text-5xl sm:text-6xl font-extrabold text-black" 
             style={{
               fontFamily: "Poller One",
               fontWeight: "regular",
