@@ -1,5 +1,3 @@
-
-
 import { Text, Img, Heading } from "../../components";
 import React from "react";
 
@@ -10,8 +8,8 @@ export default function LandingPageMainSection() {
       <div className="flex flex-col items-center justify-center gap-16 w-full">
         {/* Mobile Name and Designation Section (visible only on mobile) */}
         <div className="flex lg:hidden flex-col items-center text-center">
-          <Heading 
-            className="text-5xl sm:text-6xl font-extrabold text-black" 
+          <Heading
+            className="text-5xl sm:text-[72px] font-extrabold text-black"
             style={{
               fontFamily: "Poller One",
               fontWeight: "regular",
@@ -21,10 +19,10 @@ export default function LandingPageMainSection() {
           </Heading>
 
           <Text
-            className="text-3xl sm:text-[62px] font-semibold text-[#FF5201] mt-4"
+            className="text-4xl sm:text-[72px] font-semibold text-[#FF5201] mt-4"
             style={{
               fontFamily: "Sacramento",
-              fontSize: "62px",
+              fontSize: "72px",
               marginTop: "20px",
               fontWeight: "normal",
             }}
@@ -59,8 +57,8 @@ export default function LandingPageMainSection() {
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             {/* Desktop Name and Designation Section (visible only on desktop) */}
             <div className="hidden lg:block">
-              <Heading 
-                className="text-4xl sm:text-5xl font-extrabold text-black" 
+              <Heading
+                className="text-4xl sm:text-5xl font-extrabold text-black"
                 style={{
                   fontFamily: "Poller One",
                   fontWeight: "regular",
@@ -88,9 +86,10 @@ export default function LandingPageMainSection() {
 
             <Text className="text-lg sm:text-2xl text-gray-700 max-w-2xl font-semibold mt-4">
               "Bringing ideas to life through art, where every piece tells a
-              story, sparks emotion, and celebrates creativity in all its forms."
+              story, sparks emotion, and celebrates creativity in all its
+              forms."
             </Text>
-            
+
             {/* Education Section */}
             <div className="hidden sm:block w-full max-w-lg rounded-lg bg-white p-6 shadow-2xl mt-8">
               <div className="flex items-center gap-4">
@@ -107,7 +106,9 @@ export default function LandingPageMainSection() {
               </div>
               <div className="flex items-center gap-4 mt-5">
                 <Img src="images/location.png" alt="Location" className="h-6" />
-                <Text className="text-lg font-medium">Surat, Gujarat, India</Text>
+                <Text className="text-lg font-medium">
+                  Surat, Gujarat, India
+                </Text>
               </div>
             </div>
           </div>
