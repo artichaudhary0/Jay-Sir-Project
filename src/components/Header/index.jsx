@@ -144,7 +144,7 @@ const Header = () => {
           </div>
 
           {/* Profile Section with adjusted margin-top */}
-          <div className="flex items-center gap-3 mt-[270px]"> {/* Adjusted margin-top */}
+          <div className="flex items-center gap-3"> {/* Adjusted margin-top */}
             <img
               src="/images/userprofile.png"
               className="w-34 p-2 object-contain"
