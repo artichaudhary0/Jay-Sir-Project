@@ -38,6 +38,7 @@ const Header = () => {
 
   return (
     <header className="relative md:h-screen h-[327px]">
+      
       {/* Desktop Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center brightness-75 hidden md:block"
@@ -53,7 +54,9 @@ const Header = () => {
           backgroundImage: `url(${bgImage})`,
           width: 'calc(100% - 2rem)'
         }}
+        
       />
+      
 
       {/* Mobile Action Buttons */}
       <div className="absolute bottom-4 left-8 flex flex-col gap-2 md:hidden z-10">
@@ -126,6 +129,7 @@ const Header = () => {
             <LogOut className="h-5 w-5" />
           </button>
         </div>
+        
 
         {/* Mobile Menu Button */}
         <button
@@ -135,6 +139,7 @@ const Header = () => {
           &#9776;
         </button>
       </div>
+
 
       {/* Mobile Sidebar */}
       {isMenuOpen && (
@@ -162,14 +167,18 @@ const Header = () => {
             <div className="flex items-center gap-4 mt-2">
               <img
                 src="/images/userprofile.png"
-                className="w-20 h-20 object-cover rounded-full"
+                className="w-20 h-20 object-cover"
                 alt="Profile"
               />
               <div>
                 <p className="text-xl font-semibold">John Doe</p>
                 <p className="text-gray-500">@johndoe</p>
               </div>
+              <div className="border" />
             </div>
+
+            {/* Pink Linear Divider */}
+            <div className="mt-6 h-[2px] bg-gradient-to-r from-pink-200 via-pink-300 to-pink-200 rounded-full" />
 
             {/* Navigation Items */}
             <div className="mt-6">
