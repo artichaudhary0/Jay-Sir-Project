@@ -1,33 +1,29 @@
-body {  
-    margin: 0;  
-    padding: 0;  
-    font-family: Poppins;  
-}  
-* {  
-    box-sizing: border-box;  
-    line-height: normal;  
-    font-family: inherit;  
-    margin: unset;  
-    
-}  
-
+/* Prevent Horizontal Overflow */
 body {
-    font-family: 'Poppins';
-  }
-  
-
-a {  
-    text-decoration: none;
-    display: block; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-ul {
-    margin:0;
-    margin-inline: unset !important;  
-    padding: 0;  
-    list-style: none;  
-}  
+/* Reset for all elements */
+* {
+    box-sizing: border-box;
+    line-height: normal;
+    font-family: inherit;
+    margin: unset;
+    padding: unset;
+}
 
-.alice-carousel_dots-item {  
-    cursor: pointer;  
+/* Links reset */
+a {
+    text-decoration: none;
+    display: block;
+}
+
+/* Remove default styling from lists */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }

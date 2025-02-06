@@ -11,13 +11,13 @@ export default function MediaOfArtsGallery({
   imageSrc = "images/g1.png",
   bgColor = "bg-white",
   textColor = "#535454",
-  shapes = [], // Array of shape objects { src, alt }
+  shapes = [],
   ...props
 }) {
   return (
     <div
       {...props}
-      className={`${props.className} flex flex-col w-[32%] md:w-full py-2.5 ${bgColor} shadow-2xl rounded-[10px] transition-transform hover:scale-105`}
+      className={`${props.className} flex flex-col w-full lg:w-[32%] py-2.5 ${bgColor} shadow-2xl rounded-[10px] transition-transform hover:scale-105`}
     >
       <div className="flex flex-col items-center self-stretch">
         <div className="w-[40%] rounded-[52px] bg-deep_orange-50 p-[18px]">
@@ -62,7 +62,6 @@ export default function MediaOfArtsGallery({
               {showMoreText}
             </Heading>
           </div>
-
 
           <div className="absolute left-0 right-0 top-0 mx-auto flex flex-1 flex-col items-center">
             <div className="mr-1.5 flex items-start justify-between gap-5 self-stretch">

@@ -1,7 +1,6 @@
-
 import { Heading } from "../../components";
 import MediaOfArtsGallery from "../../components/MediaOfArtsGallery";
-import React, { Suspense } from "react";
+import React, { useState, useEffect } from "react";
 
 const mediaArtsList = [
   {
@@ -10,7 +9,7 @@ const mediaArtsList = [
     oilColorText: "Oil Color",
     pencilColorText: "Pencil Color",
     showMoreText: "Show +5 More",
-    showMoreTextColor : "#FF5201" ,
+    showMoreTextColor: "#FF5201",
     imageSrc: "/images/g1.png",
     bgColor: "bg-white",
     textColor: "text-black",
@@ -28,7 +27,7 @@ const mediaArtsList = [
     oilColorText: "Painting",
     pencilColorText: "Painting",
     showMoreText: "Show +5 More",
-    showMoreTextColor : "#006CA2" ,
+    showMoreTextColor: "#006CA2",
     imageSrc: "/images/g2.png",
     bgColor: "bg-white",
     textColor: "text-black",
@@ -39,7 +38,6 @@ const mediaArtsList = [
       { src: "/images/star3.png", alt: "Circle", className: "absolute bottom-10 right-10 h-[20px]" },
       { src: "/images/triangle3.png", alt: "Circle", className: "absolute bottom-10 right-10 h-[20px]" },
     ],
-    
   },
   {
     mainTitle: "Themes of Arts",
@@ -47,7 +45,7 @@ const mediaArtsList = [
     oilColorText: "Portrait",
     pencilColorText: "Landscape",
     showMoreText: "Show +5 More",
-    showMoreTextColor : "#4B0082" ,
+    showMoreTextColor: "#4B0082",
     imageSrc: "/images/g3.png",
     bgColor: "bg-white",
     textColor: "text-black",
@@ -62,6 +60,28 @@ const mediaArtsList = [
 ];
 
 export default function ExpertiseAndArtSection() {
+  const [currentCardIndex, setCurrentCardIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const handleNextCard = () => {
+    setCurrentCardIndex((prev) => (prev + 1) % mediaArtsList.length);
+  };
+
+  const handlePrevCard = () => {
+    setCurrentCardIndex((prev) => (prev - 1 + mediaArtsList.length) % mediaArtsList.length);
+  };
+
   return (
     <div id="art-information" className="mt-[94px] flex flex-col items-center gap-[30px]">
       <div className="flex flex-col items-center justify-center self-stretch">
@@ -86,11 +106,37 @@ export default function ExpertiseAndArtSection() {
           </Heading>
         </div>
         <div className="container-xs md:px-5 py-5">
-          <div className="flex flex-row gap-[30px] justify-center flex-nowrap">
-              {mediaArtsList.map((item, index) => (
-                <MediaOfArtsGallery {...item} key={index} className="shadow-2xl p-6 rounded-lg transition-transform hover:scale-70"/>
-              ))}
-
+          <div className="flex flex-col lg:flex-row gap-[30px] justify-center items-center">
+            {isMobile ? (
+              <>
+                <MediaOfArtsGallery
+                  {...mediaArtsList[currentCardIndex]}
+                  className="shadow-2xl p-6 rounded-lg transition-transform hover:scale-105 max-w-[400px]"
+                />
+                <div className="flex gap-4 mt-4">
+                  <button
+                    onClick={handlePrevCard}
+                    className="px-4 py-2 bg-purple-900 text-white rounded-lg hover:bg-purple-800"
+                  >
+                    Previous
+                  </button>
+                  <button
+                    onClick={handleNextCard}
+                    className="px-4 py-2 bg-purple-900 text-white rounded-lg hover:bg-purple-800"
+                  >
+                    Next
+                  </button>
+                </div>
+              </>
+            ) : (
+              mediaArtsList.map((item, index) => (
+                <MediaOfArtsGallery
+                  {...item}
+                  key={index}
+                  className="shadow-2xl p-6 rounded-lg transition-transform hover:scale-105"
+                />
+              ))
+            )}
           </div>
         </div>
       </div>
